@@ -15,6 +15,13 @@
         <input type="password" id="password" name="password" required>
         <button type="submit">Login</button>
         <a>Register</a>
+        <!-- message d'erreur -->
+         @if ($errors->has('email'))
+            <div class="alert alert-danger">
+                {{ $errors->first('email') }}
+            </div>
+        @endif
     </form>
+
 </body>
 </html>
